@@ -1,0 +1,32 @@
+@import "../style.css";
+
+.btn {
+    background-color: transparent;
+    border: none;
+    color: var(--Grayish-Violet);
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.80rem;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn-rounded {
+    background-color: var(--cyan);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.btn-square:hover, .btn-rounded:hover {
+    background-color: rgba(42, 207, 207, 0.65);
+}
+
+.btn-square {
+    background-color: var(--cyan);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 0.35rem;
+}

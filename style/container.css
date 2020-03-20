@@ -1,0 +1,12 @@
+@import "../style.css";
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    margin: 0 auto;
+}

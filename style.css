@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap");
+@import "/style/nav.css";
+@import "/style/container.css";
+@import "/style/button.css";
+
+:root {
+  /* COLORS */
+  /* primary */
+  --cyan: rgba(42, 207, 207, 1);
+  --dark-violet: hsl(257, 27%, 26%);
+  /* seconday */
+  --red: hsl(0, 87%, 67%);
+  /* neutral */
+  --Gray: hsl(0, 0%, 75%);
+  --Grayish-Violet: hsl(257, 7%, 63%);
+  --Very-Dark-Blue: hsl(255, 11%, 22%);
+  --Very-Dark-Violet: hsl(260, 8%, 14%);
+
+  /* FONT-SIZE */
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+
+ul {
+  list-style-type: none;
+  color: var(--Grayish-Violet);
+}
+
+li {
+    cursor: pointer;
+}
