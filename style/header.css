@@ -1,0 +1,36 @@
+@import "../style.css";
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: left; */
+    height: 60vh;
+    width: 100%;
+}
+
+.header--content {
+    flex-basis: 45%;
+    
+}
+
+.header--title {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.header--info {
+    margin: 0 0 1.5rem;
+}
+
+.header--visual {
+    position: relative;
+}
+
+.header--visual img {
+   position: absolute;
+   bottom: -250px;
+   right: -270px;
+
+}

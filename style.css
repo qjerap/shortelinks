@@ -2,6 +2,7 @@
 @import "/style/nav.css";
 @import "/style/container.css";
 @import "/style/button.css";
+@import "/style/header.css";
 
 :root {
   /* COLORS */
@@ -27,6 +28,9 @@
 body {
   margin: 0;
   font-family: "Poppins";
+  overflow-x: hidden;
+  
+  
 }
 
 ul {
@@ -36,4 +40,8 @@ ul {
 
 li {
     cursor: pointer;
+}
+
+p {
+    color: var(--Grayish-Violet);
 }
