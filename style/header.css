@@ -5,8 +5,9 @@
     align-items: center;
     justify-content: space-between;
     /* text-align: left; */
-    height: 60vh;
+    height: 90vh;
     width: 100%;
+    margin-top: -4rem;
 }
 
 .header--content {
@@ -16,9 +17,7 @@
 
 .header--title {
     font-size: 4.5rem;
-    line-height: 1.2;
-    margin: 0;
-    color: #222;
+    line-height: 1.2;  
 }
 
 .header--info {

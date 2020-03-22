@@ -13,6 +13,10 @@
     outline: none;
 }
 
+.btn-square, .btn-rounded {
+    box-shadow: var(--light-shadow);
+}
+
 .btn-rounded {
     background-color: var(--cyan);
     color: #fff;
@@ -21,7 +25,8 @@
 }
 
 .btn-square:hover, .btn-rounded:hover {
-    background-color: rgba(42, 207, 207, 0.65);
+    background-color: #44E9E9;
+    transform: scale(0.98);
 }
 
 .btn-square {

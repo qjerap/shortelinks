@@ -1,0 +1,13 @@
+@import "/style.css";
+
+.footer {
+  background-color: var(--Very-Dark-Violet);
+}
+
+.footer .container {
+  padding: 2rem ;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}

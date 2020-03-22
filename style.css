@@ -3,6 +3,9 @@
 @import "/style/container.css";
 @import "/style/button.css";
 @import "/style/header.css";
+@import "/style/main.css";
+@import "/style/boost.css";
+@import "/style/footer.css";
 
 :root {
   /* COLORS */
@@ -19,6 +22,11 @@
 
   /* FONT-SIZE */
   font-size: 18px;
+
+  /* SHADOW */
+  --light-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
+  --medium-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
+
 }
 
 * {
@@ -33,7 +41,17 @@ body {
   
 }
 
+h1, h2, h3, h4 {
+    color: #222;
+    margin: 0;
+}
+
+input:focus {
+    outline: none;
+}
+
 ul {
+    margin: 0;
   list-style-type: none;
   color: var(--Grayish-Violet);
 }
