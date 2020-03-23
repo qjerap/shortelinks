@@ -37,6 +37,8 @@ body {
   margin: 0;
   font-family: "Poppins";
   overflow-x: hidden;
+  cursor: default;
+
   
   
 }

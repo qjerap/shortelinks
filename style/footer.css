@@ -5,9 +5,38 @@
 }
 
 .footer .container {
-  padding: 2rem ;
+  padding: 5rem 2rem;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+}
+
+.footer--logo {
+    
+}
+
+.footer-links .link-title {
+    color: #fff;
+    cursor: default;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.footer-links .link {
+    padding: 0.1rem 0;
+    font-size: 0.8rem;
+}
+
+.footer-links .link:hover {
+    color: var(--cyan);
+}
+
+.footer-media a {
+    padding: 0 0.5rem;
+}
+
+
+.footer-media a:hover path {
+  fill: var(--cyan);
 }
