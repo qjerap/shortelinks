@@ -1,36 +1,118 @@
 @import "../style.css";
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    /* text-align: left; */
-    height: 90vh;
-    width: 100%;
-    margin-top: -4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* text-align: left; */
+  height: 90vh;
+  width: 100%;
+  margin-top: -4rem;
 }
 
 .header--content {
-    flex-basis: 45%;
-    
+  flex-basis: 45%;
 }
 
 .header--title {
-    font-size: 4.5rem;
-    line-height: 1.2;  
+  font-size: 4.5rem;
+  line-height: 1.2;
 }
 
 .header--info {
-    margin: 0 0 1.5rem;
+  margin: 0 0 1.5rem;
 }
 
 .header--visual {
-    position: relative;
+  position: relative;
 }
 
 .header--visual img {
-   position: absolute;
-   bottom: -250px;
-   right: -270px;
+  position: absolute;
+  bottom: -250px;
+  right: -270px;
+}
 
+@media (max-width: 1200px) {
+  .header--content {
+    flex-basis: 55%;
+  }
+  .header--title {
+    font-size: 3.5rem;
+  }
+  .header--info {
+    font-size: 0.95rem;
+  }
+
+  .header--visual img {
+    position: absolute;
+    bottom: -250px;
+    right: -290px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header--content {
+    flex-basis: 55%;
+  }
+  .header--title {
+    font-size: 3rem;
+  }
+  .header--info {
+    font-size: 0.9rem;
+  }
+
+  .header--visual img {
+
+    position: absolute;
+    bottom: -250px;
+    right: -320px;
+  }
+}
+
+@media (max-width: 1000px) {
+    .header--visual img {
+
+        position: absolute;
+        bottom: -250px;
+        right: -400px;
+      }
+}
+
+@media (max-width: 850px) {
+    .header {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        
+      }
+
+      .header--content {
+          order: 2;
+          flex-basis: 60%;
+          text-align: center;
+      }
+
+      .header--visual img {
+
+        position: relative;
+        top: 0rem;
+        left: 5rem;
+        z-index: -2;
+  
+      }
+
+}
+
+@media (max-width: 520px) {
+    .header {
+        /* margin-bottom: 15rem; */
+    }
+
+    .header--title {
+        font-size: 2.5rem;
+      }
+      .header--info {
+        font-size: 0.9rem;
+      }
 }

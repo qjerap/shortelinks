@@ -2,25 +2,21 @@ const shortenInput = document.getElementById("shorten-input"),
   shortenForm = document.getElementById("shorten-form"),
   shortenErrorMessage = document.getElementById("shorten-error-message");
 
+const shortLinks = document.getElementById("short-container");
+
+const navBurger = document.getElementById("nav-burger");
+
 // Event Listeners
 shortenForm.addEventListener("submit", e => {
   e.preventDefault();
 
-  
-  if(!shortenInput.value) {
+  if (!shortenInput.value) {
     shortenInput.classList.add("error");
-    shortenErrorMessage.style.opacity = 1
-}
-
-
-
+    shortenErrorMessage.style.opacity = 1;
+  }
 });
 
-
-
-
-
 // On Reload - scroll to top of page
-window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+// window.onbeforeunload = function () {
+//     window.scrollTo(0, 0);
+//   }

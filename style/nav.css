@@ -1,30 +1,66 @@
 @import "../style.css";
 
-
 .nav {
-    height: 4rem;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 99;
+  height: 4rem;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
 }
 
 .nav--menu {
-    display: flex;
+  display: flex;
+  flex-basis: 80%;
+  text-align: left;
 }
 
 .nav--menu li {
-    padding: 0 10px;
-    font-weight: 700;
-    font-size: 0.75rem;
+  padding: 0 0.5rem;
+  font-weight: 700;
+  font-size: 0.75rem;
 }
 
 .nav--menu li:hover {
-    color: #222;
+  color: #222;
 }
 
+.nav--users {
+  display: flex;
+  min-width: 140px;
+  flex-basis: auto;
+}
 .nav--login:hover {
-    color: #222;
+  color: #222;
+}
+
+.nav--logo {
+  display: flex;
+  flex-basis: auto;
+  justify-content: center;
+}
+
+.nav--burger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav--burger:hover path {
+  fill: var(--cyan);
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: transform 0.1s ease;
+}
+
+@media screen and (max-width: 850px) {
+  .nav--menu,
+  .nav--users {
+    display: none;
+  }
+
+  .nav--burger {
+    display: flex;
+
+  }
 }

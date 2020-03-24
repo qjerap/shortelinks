@@ -1,37 +1,44 @@
 @import "../style.css";
 
 .btn {
-    background-color: transparent;
-    border: none;
-    color: var(--Grayish-Violet);
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 0.80rem;
+  background-color: transparent;
+  border: none;
+  color: var(--Grayish-Violet);
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.8rem;
 }
 
 .btn:focus {
-    outline: none;
+  outline: none;
 }
 
-.btn-square, .btn-rounded {
-    box-shadow: var(--light-shadow);
+.btn-square,
+.btn-rounded {
+  box-shadow: var(--light-shadow);
 }
 
 .btn-rounded {
-    background-color: var(--cyan);
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
+  background-color: var(--cyan);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
 }
 
-.btn-square:hover, .btn-rounded:hover {
-    background-color: #44E9E9;
-    transform: scale(0.98);
+.btn-square:hover,
+.btn-rounded:hover {
+  background-color: #44e9e9;
+  transform: scale(0.98);
 }
 
 .btn-square {
-    background-color: var(--cyan);
-    color: #fff;
-    padding: 1rem 2rem;
-    border-radius: 0.35rem;
+  background-color: var(--cyan);
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.35rem;
+}
+
+.btn-small {
+  padding: 0.75 1.5rem;
+  font-size: 0.8rem;
 }

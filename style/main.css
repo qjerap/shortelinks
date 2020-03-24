@@ -12,7 +12,7 @@ main {
   background-color: var(--dark-violet);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 70vw;
+  width: 100%;
   height: 168px;
   box-shadow: var(--light-shadow);
   border-radius: 0.5rem;
@@ -43,6 +43,61 @@ input.error::placeholder {
   color: var(--red);
   font-style: italic;
 }
+
+@media (max-width: 750px) {
+  .main--form {
+    flex-direction: column;
+    height: 238px;
+
+  }
+
+  .main--form input {
+    width: 80%;
+    margin: 0;
+  }
+
+  .main--form button {
+    width: 80%;
+    margin: 1rem 0 0 0;
+
+  }
+}
+
+/* Shortened links  */
+
+.short-container {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.short {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-top: -3rem;
+  padding: 0.2rem 1.5rem;
+}
+
+.short-url {
+  color: #222;
+  flex-basis: 60%;
+}
+
+
+
+.short-new-url {
+  color: var(--cyan);
+  flex-basis: 30%;
+  text-align: right;
+  margin-right: 3rem;
+
+}
+
+
+
 /* Title and subtitle */
 .main--text-content {
   display: flex;
@@ -64,20 +119,23 @@ input.error::placeholder {
 .card--info {
   font-size: 0.85rem;
 }
-.main--cards {
-  display: flex;
-}
 /* CARDS */
 .main--cards {
+  display: flex;
+  justify-content: center;
   position: relative;
 }
+
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #fff;
   margin: 3rem 0.7rem 7rem;
   padding: 3.5rem 1.5rem 2rem;
-  height: 250px;
-  max-width: 350px;
+  height: 15rem;
+  max-width: 25%;
   border-radius: 0.25rem;
   z-index: 2;
   box-shadow: var(--light-shadow);
@@ -103,10 +161,56 @@ input.error::placeholder {
 .card--line {
   position: absolute;
   height: 0.5rem;
-  width: 80%;
+  width: 70%;
   background-color: var(--cyan);
   top: 35%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+}
+
+@media (max-width: 1155px) {
+  .card {
+    height: 18rem;
+    max-width: 33%;
+  }
+
+  .card--title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .main--cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 5rem;
+
+  }
+
+  .card {
+    height: fit-content;
+    max-width: 100%;
+    margin: 0;
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .card--line {
+    transform: rotate(90deg) translateX(-5rem);
+    transform-origin: left;
+    width: 88%;
+
+  }
+
+}
+
+@media (max-width: 610px) {
+  .card--line {
+    
+    width: 132%;
+    z-index: 50;
+
+  }
 }

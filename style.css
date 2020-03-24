@@ -26,7 +26,6 @@
   /* SHADOW */
   --light-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
   --medium-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.5);
-
 }
 
 * {
@@ -38,30 +37,30 @@ body {
   font-family: "Poppins";
   overflow-x: hidden;
   cursor: default;
-
-  
-  
 }
 
-h1, h2, h3, h4 {
-    color: #222;
-    margin: 0;
+h1,
+h2,
+h3,
+h4 {
+  color: #222;
+  margin: 0;
 }
 
 input:focus {
-    outline: none;
+  outline: none;
 }
 
 ul {
-    margin: 0;
+  margin: 0;
   list-style-type: none;
   color: var(--Grayish-Violet);
 }
 
 li {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 p {
-    color: var(--Grayish-Violet);
+  color: var(--Grayish-Violet);
 }
