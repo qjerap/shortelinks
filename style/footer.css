@@ -13,7 +13,16 @@
 }
 
 .footer--logo {
-    
+}
+
+.footer-links {
+  display: flex;
+}
+
+
+.footer-links ul {
+  padding-inline-start: 0;
+  padding: 0 2vw;
 }
 
 .footer-links .link-title {
@@ -39,4 +48,38 @@
 
 .footer-media a:hover path {
   fill: var(--cyan);
+}
+
+
+@media(max-width: 850px) {
+  .footer-links {
+   margin: 3rem 0;
+  }
+
+
+  .footer .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
+
+@media(max-width: 500px) {
+  .footer-links {
+
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+
+  .footer-links .link {
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+    
+}
+
+
+
 }

@@ -17,3 +17,10 @@
     margin: 1rem;
     font-size: 2.5rem;
 }
+
+@media (max-width: 565px) {
+    .boost--title {
+        margin: 0.5rem 0 2.5rem;
+        font-size: 1.5rem;
+    }
+  }

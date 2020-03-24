@@ -48,7 +48,6 @@ input.error::placeholder {
   .main--form {
     flex-direction: column;
     height: 238px;
-
   }
 
   .main--form input {
@@ -59,7 +58,6 @@ input.error::placeholder {
   .main--form button {
     width: 80%;
     margin: 1rem 0 0 0;
-
   }
 }
 
@@ -86,17 +84,12 @@ input.error::placeholder {
   flex-basis: 60%;
 }
 
-
-
 .short-new-url {
   color: var(--cyan);
   flex-basis: 30%;
   text-align: right;
   margin-right: 3rem;
-
 }
-
-
 
 /* Title and subtitle */
 .main--text-content {
@@ -187,30 +180,30 @@ input.error::placeholder {
     justify-content: center;
     align-content: center;
     margin-bottom: 5rem;
-
   }
 
   .card {
     height: fit-content;
     max-width: 100%;
     margin: 0;
-    padding: 3rem 1.5rem 2rem;
+    padding: 3rem 1.5rem 1rem;
   }
 
   .card--line {
-    transform: rotate(90deg) translateX(-5rem);
+    transform: rotate(90deg) translateX(-6rem);
     transform-origin: left;
     width: 88%;
-
   }
-
 }
 
 @media (max-width: 610px) {
   .card--line {
-    
     width: 132%;
-    z-index: 50;
+  }
+}
 
+@media (max-width: 475px) {
+  .card--line {
+    width: 175%;
   }
 }
