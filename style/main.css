@@ -82,6 +82,9 @@ input.error::placeholder {
 .short-url {
   color: #222;
   flex-basis: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .short-new-url {
@@ -89,6 +92,28 @@ input.error::placeholder {
   flex-basis: 30%;
   text-align: right;
   margin-right: 3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 750px) {
+  .short {
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  .short-url {
+    border-bottom: 1px solid var(--Gray);
+  }
+
+  .short-url,
+  .short-new-url {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+  }
 }
 
 /* Title and subtitle */
@@ -187,18 +212,24 @@ input.error::placeholder {
     max-width: 100%;
     margin: 0;
     padding: 3rem 1.5rem 1rem;
+    text-align: center;
   }
 
   .card--line {
     transform: rotate(90deg) translateX(-6rem);
     transform-origin: left;
-    width: 88%;
+    width: 86%;
+  }
+
+  .card--icon {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 @media (max-width: 610px) {
   .card--line {
-    width: 132%;
+    width: 125%;
   }
 }
 

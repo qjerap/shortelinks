@@ -1,0 +1,53 @@
+@import "../style.css";
+
+.nav-modal {
+  display: none;
+  position: fixed;
+  max-width: 100vw;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.nav-modal.show {
+  display: flex;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.nav-modal .container {
+  background-color: var(--dark-violet);
+  border-radius: 0.5rem;
+  width: 16rem;
+  height: 324px;
+  margin: 5rem auto;
+  padding: 0;
+
+  box-shadow: var(--medium-shadow);
+}
+
+.nav-modal ul {
+  width: 98%;
+  padding-inline-start: 0;
+  padding: 0.5rem 0;
+  color: #fff;
+}
+
+.nav-modal li {
+  margin: 1rem;
+  text-align: center;
+}
+.nav-modal li:hover {
+  transform: scale(0.98);
+  color: var(--cyan);
+}
+
+.nav-modal button {
+  width: 80%;
+}
+
+.nav-modal ul:first-child {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}

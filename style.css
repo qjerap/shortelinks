@@ -6,6 +6,7 @@
 @import "/style/main.css";
 @import "/style/boost.css";
 @import "/style/footer.css";
+@import "/style/nav_modal.css";
 
 :root {
   /* COLORS */
@@ -33,6 +34,15 @@
 }
 
 body {
+  margin: 0;
+  font-family: "Poppins";
+  overflow-x: hidden;
+  cursor: default;
+}
+
+.mobile {
+  overflow-x: hidden;
+
   margin: 0;
   font-family: "Poppins";
   overflow-x: hidden;
