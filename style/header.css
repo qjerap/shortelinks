@@ -106,7 +106,11 @@
 
 @media (max-width: 520px) {
     .header {
-        /* margin-bottom: 15rem; */
+        margin: 1rem 0 100%;
+    }
+
+    .header--content {
+      margin-top: 5%;
     }
 
     .header--title {
