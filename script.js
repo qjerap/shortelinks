@@ -4,7 +4,6 @@ const shortenInput = document.getElementById("shorten-input"),
 
 const short = document.getElementById("short");
 
-
 const shortDeleteBtn = document.getElementById("short-delete");
 
 const navBurger = document.getElementById("nav-burger"),
@@ -23,41 +22,85 @@ async function createShorterURL(urlInput) {
     body: JSON.stringify({ url: urlInput })
   });
   const data = await res.json();
+  // Check if data is valid
 
-  const { hashid, url, created_at } = data;
+  if (data.hashid) {
+    const { hashid, url, created_at } = data;
 
-  links.push({
-    url,
-    hashid,
-    created_at
-  });
+    links.push({
+      url,
+      hashid,
+      created_at
+    });
 
-  // Save links Array to localStorage
-  localStorage.setItem("links", JSON.stringify(links));
+    // Save links Array to localStorage
+    localStorage.setItem("links", JSON.stringify(links));
 
-  short.innerHTML = ``;
-  addLinksToDOM();
+    short.innerHTML = ``;
+    addLinksToDOM();
+  } else {
+    // Show a error message "please enter a valid URL"
+
+    shortenInput.classList.add("error");
+    shortenErrorMessage.style.opacity = 1;
+    shortenErrorMessage.innerHTML = `
+      <small>Please add valid URL</small>
+      `;
+
+    // shortenInput.classList.remove("error");
+    // shortenErrorMessage.style.opacity = 0;
+    // createShorterURL(shortenInput.value);
+    // shortenInput.value = "";
+  }
 }
 
+// Copy shorted URL on button click XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+short.addEventListener("click", e => {
+  if (e.target.tagName === "BUTTON") {
+    let copyText = e.target.previousElementSibling;
+    // copyText.focus();
+    copyText.select();
+    document.execCommand("copy");
+    shortenInput.select();
+
+    let btn = e.target;
+    btn.innerHTML = `copied!`;
+    btn.style.fontWeight = "bold";
+
+    setTimeout(() => {
+      btn.innerText = `copy`;
+      btn.style.fontWeight = "normal";
+    }, 1000);
+  }
+});
+
 // Delete clicked link from Arr, localStorage and DOM
-short.addEventListener('click', (e) => {
-  if(e.target.tagName === "I") {
+short.addEventListener("click", e => {
+  if (e.target.tagName === "I") {
     // Get hashid we wants to delete
     let hash = e.target.dataset.hash;
     // Filter hashid from Links Array and delete it
-    links = links.filter(link => link.hashid !== hash)
-    
-    // Save new Links to localStorage 
+    links = links.filter(link => link.hashid !== hash);
+
+    // Save new Links to localStorage
     localStorage.setItem("links", JSON.stringify(links));
     // Reload DOM with new Array
-    addLinksToDOM()
+    addLinksToDOM();
   }
 });
+
+// Delete all links
+function deleteAllLinks() {
+  links = [];
+  localStorage.setItem("links", JSON.stringify(links));
+
+  addLinksToDOM();
+}
 
 // Add links to Dom
 function addLinksToDOM() {
   short.innerHTML = ``;
-  if (links) {
+  if (links.length > 0) {
     links.forEach(link => {
       const shortLink = document.createElement("div");
       shortLink.classList.add("short-container");
@@ -71,14 +114,27 @@ function addLinksToDOM() {
           ${link.url}
         </p>
 
-        <a target="_blank" href="https://rel.ink/${link.hashid}" class="short-new-url">https://rel.ink/${link.hashid}</a>
 
-        <button class="btn btn-square btn-cyan btn-small">Copy</button>
+        <textarea
+        rows="1"
+        readonly
+        wrap="off" 
+        class="short-new-url">https://rel.ink/${link.hashid}</textarea>
+        <button 
+        id="copied"
+        class="copied btn btn-square btn-cyan btn-small" 
+        onclick="copied" 
+        >Copy</button>
 
       </div>
       `;
       short.appendChild(shortLink);
     });
+    const deleteAll = document.createElement("div");
+    deleteAll.innerHTML = `
+      <button class="btn btn-square container btn-danger" onclick="deleteAllLinks()">delete all shortened URL</button>
+    `;
+    short.appendChild(deleteAll);
   }
 }
 
@@ -97,13 +153,10 @@ window.addEventListener("click", e => {
 
 // On Load - get LocalStorage Links array
 function getLinksFromStorage() {
-
-
   const l = JSON.parse(localStorage.getItem("links"));
-  if(l === null) {
-   links = []
+  if (l === null) {
+    links = [];
   } else {
-
     links = l;
     addLinksToDOM();
   }
@@ -121,9 +174,11 @@ shortenForm.addEventListener("submit", e => {
   e.preventDefault();
 
   if (!shortenInput.value) {
+    shortenErrorMessage.innerHTML = `
+    <small>Please type an URL...</small>
+    `;
     shortenInput.classList.add("error");
     shortenErrorMessage.style.opacity = 1;
-    console.log("kek");
   } else {
     shortenInput.classList.remove("error");
     shortenErrorMessage.style.opacity = 0;

@@ -74,16 +74,23 @@ input.error::placeholder {
 
 .short {
   position: relative;
+  margin-top: -3rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   border-radius: 0.5rem;
-  margin-top: -3rem;
   padding: 0.2rem 1.5rem;
   box-shadow: var(--light-shadow);
+}
 
+.short-container:nth-of-type(even) button {
+  background-color: #238be6;
+}
+
+.short-container:nth-of-type(even) button:hover {
+  background-color: #009999;
 }
 
 .short-delete {
@@ -91,7 +98,6 @@ input.error::placeholder {
   opacity: 0.2;
   left: -1.5rem;
   cursor: pointer;
-
 }
 
 .short-delete:hover {
@@ -108,12 +114,18 @@ input.error::placeholder {
 
 .short-new-url {
   color: var(--cyan);
-  flex-basis: 30%;
-  text-align: right;
-  margin-right: 3rem;
-  white-space: nowrap;
+  flex-basis: 50%;
+  text-align: center;
+  border: none;
+  outline: none;
+  resize: none;
+  margin: 0;
+  height: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1rem;
+}
+
+textarea {
 }
 
 @media (max-width: 750px) {
